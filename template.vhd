@@ -1,20 +1,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity bcd_encode is
-    Port (		
-	digit_selection_in: in std_logic; -- Choose left or right
-	bcd : in std_logic_vector(3 downto 0); -- BCD 4 bits	
-	seven_segment : out std_logic_vector(6 downto 0); -- Converted 7 bits
-	digit_selection_out : out std_logic -- JB4 Cat Pin
+entity entity_name is
+    Port (			
 );
-end bcd_encode;
+end entity_name;
 
-architecture Behavioral of bcd_encode is
+architecture Behavioral of entity_name is
 begin
-    digit_selection_out <= digit_selection_in;
-
-    bcd_values: process(bcd) begin
+    process_name: process( sensitivity list ) begin
         case bcd is
 	    when "0000" => seven_segment <= "0111111";
 	    when "0001" => seven_segment <= "0000110";
@@ -27,7 +21,6 @@ begin
 	    when "1000" => seven_segment <= "1111111";
 	    when "1001" => seven_segment <= "1101111";
 	    when others => seven_segment <= "0000000";
-	end case;	
-    end process bcd_values;
-
+	end case;
+    end process process_name;
 end Behavioral;
