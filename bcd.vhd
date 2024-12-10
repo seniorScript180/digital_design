@@ -1,5 +1,4 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library IEEE; USE IEEE.STD_LOGIC_1164.ALL; USE ieee.numeric_std.ALL;
 
 entity bcd_encode is
     Port (		
@@ -13,7 +12,6 @@ end bcd_encode;
 architecture Behavioral of bcd_encode is
 begin
     digit_selection_out <= digit_selection_in;
-
     bcd_values: process(bcd) begin
         case bcd is
 	    when "0000" => seven_segment <= "0111111";
@@ -29,5 +27,4 @@ begin
 	    when others => seven_segment <= "0000000";
 	end case;	
     end process bcd_values;
-
 end Behavioral;
