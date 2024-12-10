@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity entity_name is
     Port (			
-);
+    );
 end entity_name;
 
 architecture Behavioral of entity_name is
