@@ -1,9 +1,7 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library IEEE; USE IEEE.STD_LOGIC_1164.ALL; USE ieee.numeric_std.ALL;
 
 entity entity_name is
-    Port (			
-    );
+    -- Port ();
 end entity_name;
 
 architecture Behavioral of entity_name is
