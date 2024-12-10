@@ -2,10 +2,10 @@ library IEEE; USE IEEE.STD_LOGIC_1164.ALL; USE ieee.numeric_std.ALL;
 
 entity bcd_encode is
     Port (		
-	digit_selection_in: in std_logic; -- Choose left or right
-	bcd : in std_logic_vector(3 downto 0); -- BCD 4 bits	
+	digit_selection_in: in std_logic; 				  -- Choose left or right
+	bcd : in std_logic_vector(3 downto 0); 			  -- BCD 4 bits	
 	seven_segment : out std_logic_vector(6 downto 0); -- Converted 7 bits
-	digit_selection_out : out std_logic -- JB4 Cat Pin
+	digit_selection_out : out std_logic 			  -- JB4 Cat Pin
 );
 end bcd_encode;
 
